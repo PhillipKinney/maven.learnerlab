@@ -51,7 +51,7 @@ public class TestInstructor {
     public void testLecture(){
         //given
         Teacher teacher = new Instructor(null, null);
-        Learner[] learners = new learner[]{
+        Learner[] learners = new Learner[]{
                 new Student(0L, "Phillip"),
                 new Student(1L, "J"),
                 new Student(2L, "Kinney"),
@@ -73,4 +73,4 @@ public class TestInstructor {
         }
     }
 
-}
+
