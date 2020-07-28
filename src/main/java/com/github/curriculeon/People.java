@@ -1,9 +1,12 @@
 package com.github.curriculeon;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-public class People {
+public class People implements Iterable<Person> {
     List<Person> personList;
 
     public People(){
@@ -29,6 +32,11 @@ public class People {
          return null;
      }
 
+     public Boolean contains(Person person){
+        personList.contains(person);
+        return true;
+     }
+
   public void remove(Person someSpecifiedPerson){
       personList.remove(someSpecifiedPerson);
   }
@@ -43,4 +51,10 @@ public class People {
       Person[] newArray = new Person[arrayLength];
       return personList.toArray(newArray);
   }
+
+    @Override
+    public Iterator<Person> iterator() {
+        return personList.iterator();
+    }
 }
+
