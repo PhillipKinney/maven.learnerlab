@@ -21,7 +21,7 @@ public class TestPerson {
     @Test
     public void testSetName(){
         // given
-        Person person = new Person(null, null);
+        Person person = new Person(0L,null);
         String expectedName = "Some name";
         Assert.assertNotEquals(expectedName, person.getName());
 

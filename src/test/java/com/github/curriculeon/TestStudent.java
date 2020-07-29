@@ -8,7 +8,7 @@ public class TestStudent {
     @Test
     public void testImplementation() {
         // given
-        Student student = new Student(null, null);
+        Student student = new Student(0L, null);
 
         //when
         Boolean result = student instanceof Learner;
@@ -20,7 +20,7 @@ public class TestStudent {
     @Test
     public void testInheritance(){
         //given
-        Student student = new Student(null,null);
+        Student student = new Student(0L,null);
         //when
         Boolean result = student instanceof Person;
         //then
@@ -30,7 +30,7 @@ public class TestStudent {
     @Test
     public void testLearn(){
         //given
-        Student student = new Student(null, null);
+        Student student = new Student(0L, null);
         Double numberOfHoursToLearn = 98.0;
         Double preStudyTime = student.getTotalStudyTime();
         Double expected = preStudyTime + numberOfHoursToLearn;

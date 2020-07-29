@@ -7,7 +7,7 @@ public class TestInstructor {
     @Test
     public void testImplementation(){
         //given
-        Instructor instructor = new Instructor(null, null);
+        Instructor instructor = new Instructor(0L, null);
 
         //when
         boolean outcome = instructor instanceof Teacher;
@@ -19,7 +19,7 @@ public class TestInstructor {
     @Test
     public void testInheritence(){
         //given
-        Instructor instructor = new Instructor(null, null);
+        Instructor instructor = new Instructor(0L, null);
 
         //when
         boolean outcome = instructor instanceof Person;
@@ -32,8 +32,8 @@ public class TestInstructor {
     @Test
     public void testTeach(){
         //given
-        Instructor instructor = new Instructor(null, null);
-        Learner learner =  new Student(null, null);
+        Instructor instructor = new Instructor(0L, null);
+        Learner learner =  new Student(0L, null);
         Double numberOfHoursToTeach = 134.0;
         Double preStudyTime = learner.getTotalStudyTime();
         Double expected = preStudyTime + numberOfHoursToTeach;
@@ -50,7 +50,7 @@ public class TestInstructor {
     @Test
     public void testLecture(){
         //given
-        Teacher teacher = new Instructor(null, null);
+        Teacher teacher = new Instructor(0L, null);
         Learner[] learners = new Learner[]{
                 new Student(0L, "Phillip"),
                 new Student(1L, "J"),

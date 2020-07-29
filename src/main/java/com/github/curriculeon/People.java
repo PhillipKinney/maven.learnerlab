@@ -37,8 +37,8 @@ public class People implements Iterable<Person> {
         return true;
      }
 
-  public void remove(Person someSpecifiedPerson){
-      personList.remove(someSpecifiedPerson);
+  public void remove(Person person){
+      personList.remove(person);
   }
   public void removeAll(){
       personList.clear();
